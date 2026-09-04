@@ -1,0 +1,307 @@
+/* ============================================
+   VENDAS-EXTRA.CSS
+   Estilos adicionais para os elementos novos
+   da landing page
+============================================ */
+
+/* ─── HERO NOVO ─── */
+.hero-jornada-label {
+    font-family: var(--font-sans);
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.03em;
+    margin-bottom: 0.35rem;
+}
+.hero-estilo-label {
+    font-family: var(--font-serif);
+    font-size: clamp(1.05rem, 2vw, 1.3rem);
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 2.5rem;
+}
+.hero-estilo-label em {
+    color: var(--text-primary);
+    font-style: italic;
+}
+.hero-cta-bloco {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+}
+.hero-skip-text {
+    font-size: 0.78rem;
+    color: var(--text-subtle);
+    font-style: italic;
+    letter-spacing: 0.02em;
+}
+.btn-glow {
+    animation: btnPulse 2.2s ease-in-out infinite;
+    font-size: 0.95rem;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    padding: 1.2rem 2.5rem;
+}
+@keyframes btnPulse {
+    0%, 100% { box-shadow: 0 0 14px rgba(201,169,110,0.35), 0 4px 20px rgba(201,169,110,0.2); }
+    50%       { box-shadow: 0 0 32px rgba(201,169,110,0.65), 0 6px 28px rgba(201,169,110,0.4); }
+}
+.hero-cta-sub {
+    font-size: 0.78rem;
+    color: var(--text-subtle);
+    font-style: italic;
+    line-height: 1.5;
+    max-width: 420px;
+}
+.hero-cta-via {
+    color: var(--text-subtle);
+}
+
+/* ─── ÍCONES DE MERECER ─── */
+.merecer-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+    margin: 1.75rem 0 1.5rem;
+}
+.merecer-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+}
+.merecer-icon-item.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+.merecer-icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--accent-light);
+    border: 1px solid rgba(201,169,110,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+    cursor: default;
+}
+.merecer-icon-item:hover .merecer-icon-circle {
+    transform: scale(1.1) translateY(-3px);
+    background: rgba(201,169,110,0.2);
+}
+.merecer-icon-item span {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-align: center;
+    font-family: var(--font-serif);
+    font-style: italic;
+}
+
+/* ─── AINDA NÃO ─── */
+.ainda-nao-bloco {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.15rem;
+    margin: 1.5rem 0 0.5rem;
+    position: relative;
+    padding: 1.5rem 1.75rem;
+    background: linear-gradient(135deg, rgba(201,169,110,0.07), rgba(201,169,110,0.03));
+    border: 1px solid rgba(201,169,110,0.2);
+    border-radius: var(--radius-md);
+}
+.ainda-nao-aspas {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    color: rgba(201,169,110,0.35);
+    line-height: 1;
+    align-self: flex-start;
+}
+.ainda-nao-texto {
+    font-family: var(--font-serif);
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-style: italic;
+    color: var(--accent);
+    line-height: 1.2;
+    padding: 0 0.3rem;
+}
+
+/* ─── RETÂNGULOS (parágrafos) ─── */
+.oque-retangulos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 2.5rem;
+}
+.oque-ret-item {
+    padding: 1.1rem 1.4rem;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-left: 3px solid rgba(201,169,110,0.35);
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    font-size: 1.02rem;
+    line-height: 1.7;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity 0.4s ease, transform 0.4s ease, border-color 0.3s ease;
+}
+.oque-ret-item.visivel {
+    opacity: 1;
+    transform: translateX(0);
+}
+.oque-ret-item:hover {
+    border-left-color: var(--accent);
+    background: rgba(201,169,110,0.04);
+}
+.oque-ret-item em {
+    color: var(--text-primary);
+    font-style: italic;
+}
+.oque-ret-item p { margin: 0; }
+.oque-ret-item p + p { margin-top: 0.5rem; }
+.oque-ret-destaque {
+    border-left-color: var(--accent);
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+/* ─── ÍCONES PERCEBER/PERMITIR/LIBERAR/CONTINUAR ─── */
+.perceber-icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem 1.25rem;
+    margin-top: 2.5rem;
+    padding: 2rem 1.5rem;
+    background: linear-gradient(135deg, rgba(201,169,110,0.06), transparent);
+    border: 1px solid rgba(201,169,110,0.15);
+    border-radius: var(--radius-lg);
+}
+.perceber-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0;
+    transform: scale(0.85);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    cursor: default;
+}
+.perceber-icon-item.visivel {
+    opacity: 1;
+    transform: scale(1);
+}
+.perceber-icon-circle {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 1px solid rgba(201,169,110,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.perceber-icon-item:hover .perceber-icon-circle {
+    transform: translateY(-5px) scale(1.08);
+    box-shadow: 0 8px 24px rgba(201,169,110,0.2);
+}
+.perceber-icon-label {
+    font-family: var(--font-serif);
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--accent);
+    text-align: center;
+}
+.perceber-sep {
+    font-size: 1.3rem;
+    color: rgba(201,169,110,0.3);
+    align-self: center;
+    padding-bottom: 1.5rem;
+}
+
+/* ─── DICA: HOMESCREEN ─── */
+.dica-homescreen {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 1.25rem 1.5rem;
+    background: linear-gradient(135deg, rgba(201,169,110,0.08), rgba(201,169,110,0.03));
+    border: 1px dashed rgba(201,169,110,0.35);
+    border-radius: var(--radius-md);
+}
+.dica-icon {
+    font-size: 1.75rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+.dica-texto {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+}
+.dica-texto strong {
+    color: var(--accent);
+    font-weight: 600;
+}
+.dica-how {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-subtle);
+    font-style: italic;
+}
+
+/* ─── RESPONSIVO EXTRA ─── */
+@media (max-width: 600px) {
+    .merecer-icons {
+        justify-content: center;
+    }
+    .merecer-icon-circle {
+        width: 52px;
+        height: 52px;
+        font-size: 1.3rem;
+    }
+    .perceber-icons {
+        gap: 0.5rem;
+        padding: 1.5rem 1rem;
+    }
+    .perceber-icon-circle {
+        width: 56px;
+        height: 56px;
+        font-size: 1.5rem;
+    }
+    .perceber-sep {
+        padding-bottom: 1rem;
+    }
+    .btn-glow {
+        padding: 1.1rem 1.75rem;
+        font-size: 0.88rem;
+    }
+    .ainda-nao-bloco {
+        padding: 1.25rem 1.25rem;
+    }
+    .ainda-nao-texto {
+        font-size: 1.5rem;
+    }
+    .hero-cta-bloco {
+        align-items: stretch;
+    }
+    .btn-glow {
+        text-align: center;
+    }
+}
