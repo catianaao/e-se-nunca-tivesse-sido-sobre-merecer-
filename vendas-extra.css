@@ -17,32 +17,31 @@
     font-family: var(--font-serif);
     font-size: clamp(1.05rem, 2vw, 1.3rem);
     color: var(--text-muted);
-    font-style: italic;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
 }
 .hero-estilo-label em {
     color: var(--text-primary);
-    font-style: italic;
+    font-style: normal;
 }
 .hero-cta-bloco {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.6rem;
+    gap: 0; /* controle individual por margin */
     margin-top: 0.5rem;
 }
 .hero-skip-text {
     font-size: 0.78rem;
     color: var(--text-subtle);
-    font-style: italic;
     letter-spacing: 0.02em;
+    margin-bottom: 15px; /* 4mm entre texto e botão */
 }
 .btn-glow {
     animation: btnPulse 2.2s ease-in-out infinite;
     font-size: 0.95rem;
     letter-spacing: 0.06em;
     font-weight: 600;
-    padding: 1.2rem 2.5rem;
+    padding: 1rem 2rem;
 }
 @keyframes btnPulse {
     0%, 100% { box-shadow: 0 0 14px rgba(201,169,110,0.35), 0 4px 20px rgba(201,169,110,0.2); }
@@ -51,9 +50,9 @@
 .hero-cta-sub {
     font-size: 0.78rem;
     color: var(--text-subtle);
-    font-style: italic;
     line-height: 1.5;
     max-width: 420px;
+    margin-top: 15px; /* 4mm entre botão e este texto */
 }
 .hero-cta-via {
     color: var(--text-subtle);
@@ -63,8 +62,8 @@
 .merecer-icons {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem 1rem;
-    margin: 1.75rem 0 1.5rem;
+    gap: 0.5rem 0.75rem;
+    margin: 1rem 0;
 }
 .merecer-icon-item {
     display: flex;
@@ -101,7 +100,6 @@
     color: var(--text-muted);
     text-align: center;
     font-family: var(--font-serif);
-    font-style: italic;
 }
 
 /* ─── AINDA NÃO ─── */
@@ -111,9 +109,9 @@
     align-items: baseline;
     justify-content: center;
     gap: 0.15rem;
-    margin: 1.5rem 0 0.5rem;
+    margin: 1rem 0 0.5rem;
     position: relative;
-    padding: 1.5rem 1.75rem;
+    padding: 1rem 1.25rem;
     background: linear-gradient(135deg, rgba(201,169,110,0.07), rgba(201,169,110,0.03));
     border: 1px solid rgba(201,169,110,0.2);
     border-radius: var(--radius-md);
@@ -128,7 +126,6 @@
 .ainda-nao-texto {
     font-family: var(--font-serif);
     font-size: clamp(1.6rem, 4vw, 2.4rem);
-    font-style: italic;
     color: var(--accent);
     line-height: 1.2;
     padding: 0 0.3rem;
@@ -138,11 +135,11 @@
 .oque-retangulos {
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
-    margin-bottom: 2.5rem;
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
 }
 .oque-ret-item {
-    padding: 1.1rem 1.4rem;
+    padding: 0.85rem 1.2rem;
     background: var(--bg-card);
     border: 1px solid var(--line);
     border-left: 3px solid rgba(201,169,110,0.35);
@@ -164,14 +161,14 @@
 }
 .oque-ret-item em {
     color: var(--text-primary);
-    font-style: italic;
+    font-weight: 500;
+    font-style: normal;
 }
 .oque-ret-item p { margin: 0; }
 .oque-ret-item p + p { margin-top: 0.5rem; }
 .oque-ret-destaque {
     border-left-color: var(--accent);
     font-family: var(--font-serif);
-    font-style: italic;
     font-size: 1.1rem;
     color: var(--text-primary);
 }
@@ -182,9 +179,9 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 0.75rem 1.25rem;
-    margin-top: 2.5rem;
-    padding: 2rem 1.5rem;
+    gap: 0.5rem 1rem;
+    margin-top: 1.5rem;
+    padding: 1.5rem 1rem;
     background: linear-gradient(135deg, rgba(201,169,110,0.06), transparent);
     border: 1px solid rgba(201,169,110,0.15);
     border-radius: var(--radius-lg);
@@ -204,8 +201,8 @@
     transform: scale(1);
 }
 .perceber-icon-circle {
-    width: 68px;
-    height: 68px;
+    width: 58px;
+    height: 58px;
     border-radius: 50%;
     background: var(--bg-card);
     border: 1px solid rgba(201,169,110,0.25);
@@ -222,7 +219,6 @@
 .perceber-icon-label {
     font-family: var(--font-serif);
     font-size: 0.9rem;
-    font-style: italic;
     color: var(--accent);
     text-align: center;
 }

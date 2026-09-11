@@ -24,8 +24,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="vendas2.css">
-    <link rel="stylesheet" href="vendas-extra.css">
+    <link rel="stylesheet" href="vendas2.css?v=2">
+    <link rel="stylesheet" href="vendas-extra.css?v=2">
 </head>
 <body>
 
@@ -38,9 +38,9 @@
         const HOTMART_URL   = "https://pay.hotmart.com/J106983292D";
 
         // Redireciona quem já iniciou a jornada
-        if (localStorage.getItem('merecimento_data_v2')) {
-            window.location.href = APP_URL;
-        }
+        // if (localStorage.getItem('merecimento_data_v2')) {
+        //     window.location.href = APP_URL;
+        // }
     </script>
 
     <!-- ============================================
@@ -66,7 +66,7 @@
         <section class="hero" id="inicio">
             <div class="hero-inner container">
 
-                <h1 class="hero-title">E se nunca tivesse sido sobre merecer?</h1>
+                <h1 class="hero-title">E, se nunca tivesse<br>sido sobre merecer?</h1>
 
                 <p class="hero-jornada-label">Uma Jornada totalmente Interativa</p>
                 <p class="hero-estilo-label">No estilo: <em>Pergunte &amp; Solte &amp; Libere</em></p>
@@ -126,7 +126,7 @@
                 </div>
 
                 <div class="transicao-bloco">
-                    <p>E se,<br>em vez de ficar tentando achar respostas,<br>você começasse fazendo perguntas?</p>
+                    <p>E se, em vez de ficar tentando<br>achar respostas, você começasse<br>fazendo perguntas?</p>
                 </div>
             </div>
         </section>
